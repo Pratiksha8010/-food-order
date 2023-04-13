@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>order now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin: auto;
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        input[type=text], input[type=email], input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type=radio] {
+            margin: 5px;
+        }
+
+        input[type=reset], input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        input[type=reset]:hover, input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+        small {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #t1 {
+            width: 250px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Order !!</h2>
+
+    <div>
+        <form>
+            <div align="center">
+                <small>Name</small>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name"><br><br>
+                <small>Address</small>
+                <input type="text" placeholder="Line one">
+                <input type="text" placeholder="Line two"><br>
+                <input type="text" placeholder="City"><br><br>
+                <small>Number</small>
+                <input type="number" placeholder="Phone" id="phone">
+                <small>Email</small>
+                <input type="email" placeholder="Email"><br><br>
+            </div>
+
+            <div align="center">
+                <small>Order type</small>
+                <input type="radio" name="r1" id="delivery">
+                <label for="delivery">Delivery</label>
+                <input type="radio" name="r1" id="pickup">
+                <label for="pickup">Pick-up</label><br><br>
+                <small>No. of Quantity</small>
+                <input type="number" id="t1" onclick="change()"><br><br>
+                <small>Payment</small>
+                <input type="number" id="t2" value=""><br><br>
+                <input type="reset" value="Reset">
+                <input type="button" onclick="valid_q()" value="Done">
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function change(){
+            var num = document.getElementById("t1").value;
+            num = parseInt(num);
+            document.getElementById("t2").value = 150*num;
+        }
+        function valid_q() {
+            var num;
+            var num = document.getElementById("t1").value;
+            var price = document.getElementById("t2").value;
+            price = parseInt(price)
+            num = parseInt(num);
+            var phone = document.getElementById("phone");
+            
+            if (num > 0 && phone.value.length === 10 ) {
+                document.write("Correct number of quantity and phone number.");
+            }
+            else {
+                document.write("Incorrect number of quantity.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

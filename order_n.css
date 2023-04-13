@@ -1,0 +1,45 @@
+.first_div{
+ padding-left:2%;
+ padding-right:2%;
+background-color:rgba(0, 7, 36, 1);
+margin-top:0px;
+margin-left:20% ;
+margin-right:20% ;
+
+padding-top: 8px;
+padding-bottom: 8px;
+color:wheat;
+border-radius:20Px ;
+
+}
+.secound_div{
+    padding-left:2%;
+    padding-right:2%;
+    margin:20%;
+    margin-left:20% ;
+    margin-top:0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+color:beige;
+    background-color: rgba(0, 7, 36, 1);
+    border-radius:20Px ;
+}
+
+
+
+#k:hover{
+    
+    transition: 0.5;
+    color:green;
+    border-color:green;
+}
+#i:hover{
+    transition:0.5 ;
+    color:red;
+border-color:red;
+}
+body{
+    background-image:url("iooo.jpg");
+backdrop-filter: blur(6px);
+}
+

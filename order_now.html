@@ -1,0 +1,87 @@
+<html>
+    <body>
+        <head>
+        <title>
+          order now
+        </title>
+        <link rel="stylesheet" href="order_n.css"></link>
+        </head>
+        <h2 align="center" style="color:rgb(240, 242, 247);">`Order card`</h2>
+        
+<form action="index.html">
+              <div id="c" class="first_div" align="center">
+                <small> Name</small>
+                <input type="text" placeholder="First name"><br> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" placeholder="Last name">
+            <br>
+            <br>
+            <small>address</small>
+            <input type="text" placeholder="Line one"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Line two"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <input type="text" placeholder="city"><br><br>
+            
+            <small>Number</small>
+            <input type="number" placeholder="Phone" onclick="change()"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <input type="email" placeholder="Email"><br>
+</div>
+</form >
+
+            <div class="secound_div" align="center">
+  <form action="index.html">
+            <small>Order type</small>
+            <input type="radio" name="r1">Delivery
+            <input type="radio" name="r1">Pick-up<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <br>
+            <small> No of quentity </small>
+            <input type="number" id="t1" onclick="change()"><br><br>
+            
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+         <small>Payment</small>
+            <input type="number"id="t2"><br>
+            <br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="i" type="reset" placeholder="reset">
+            <button id="k"  class="c" type="submit" onclick="valid_q()" value="Done">Done!</button>
+            
+          </form>
+        </div>
+
+
+
+
+
+        <script>
+          function change(){
+              var num = document.getElementById("t1").value;
+              num = parseInt(num);
+              if(num<0){
+                alert("quentity must be valid")
+              }
+              
+              document.getElementById("t2").value = 150*num;
+
+          }
+          function valid_q() {
+              var num = document.getElementById("t1").value;
+              var price = document.getElementById("t2").value;
+              price = parseInt(price)
+              num = parseInt(num);
+              var phone = document.getElementById("phone");
+              console.log(num)
+              if (num > 0 && phone.value.length === 10 ) {
+                  alert("all values are coorect, Order submitted succesfully")
+              }
+              else {
+                  alert("Incorrect number of quantity. and phone number , correct them");
+              }
+          }
+      </script>
+  
+    </body>
+</html>
